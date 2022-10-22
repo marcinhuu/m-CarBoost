@@ -5,7 +5,8 @@ description 'm-CarBoost - Developed by marcinhu#0001'
 version '1.0'
 
 shared_scripts {
-	'config.lua',
+	'@ox_lib/init.lua',
+	'configs/**.lua',
 }
 
 server_scripts{
@@ -15,3 +16,5 @@ server_scripts{
 client_scripts{
 	'client/**.lua',
 }
+
+lua54 'yes'

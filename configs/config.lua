@@ -1,10 +1,9 @@
 Config = {}
 
-Config.Core = "qb-core" -- Your core name
-Config.Target = "qb-target" -- Your qb-target name
-Config.Webhook = "" -- Webhook for logs
+Config.Framework = "ESX" -- "QB" or "ESX"
+Config.Core = "esx:getSharedObject" -- qb-core or esx:getSharedObject
+Config.Webhook = "https://discord.com/api/webhooks/954483782101139456/iF74a8g1WfU58vtc6qoJq6KdHw_V2NFsZTiO4Phpg0UFir6Gn45jXDDvMWjeHELksBJ2" -- Webhook for logs
 Config.Payment = true -- Pay for upgrades?
-Config.Type = "cash" -- "cash" or "bank"
 Config.Amount = 5000 -- Amount of pay
 Config.Time = 5000 -- Time to apply the upgrades
 Config.EnableCallCops = true -- Call cops?
@@ -32,4 +31,21 @@ Language = {
 
 function PoliceCall() 
     -- export your police call
+end
+
+function Notify(msg, type)
+    if Config.Framework == "QB" then
+        
+
+    elseif Config.Framework == "ESX" then
+        if type == "primary" then 
+            exports['mythic_notify']:DoHudText('inform', msg)
+        end
+        if type == "success" then
+              exports['mythic_notify']:DoHudText('success', msg)
+        end
+        if type == "error" then
+              exports['mythic_notify']:DoHudText('error', msg)
+        end
+    end
 end

@@ -77,11 +77,11 @@ RegisterNetEvent('m-CarBoost:Client:ApplyUpgrades', function()
                         SetVehicleMod(veh,16,GetVehicleMod(veh,16),false)
                         ToggleVehicleMod(veh, 18, true) -- Turbo
                         ToggleVehicleMod(veh, 22, true) -- Xenon Headlights
-                        TriggerEvent("QBCore:Notify", Language.upgraded)
+                        TriggerEvent("QBCore:Notify", Language.upgraded, 'success', 5000))
                         TriggerServerEvent("m-CarBoost:Server:LogServer", Language.Log.." **["..plate.."]** "..Language.Log2)
                         SetVehicleDoorShut(veh, 4, false, false)
                     end, function() 
-                        QBCore.Functions.Notify(Language.canceled, 'error')
+                        QBCore.Functions.Notify(Language.canceled, 'error', 5000)
                     end)
                 end
             end)
@@ -100,14 +100,14 @@ RegisterNetEvent('m-CarBoost:Client:ApplyUpgrades', function()
                 SetVehicleMod(veh,16,GetVehicleMod(veh,16),false)
                 ToggleVehicleMod(veh, 18, true) -- Turbo
                 ToggleVehicleMod(veh, 22, true) -- Xenon Headlights
-                TriggerEvent("QBCore:Notify", Language.upgraded)
+                TriggerEvent("QBCore:Notify", Language.upgraded, 'success', 5000)
                 TriggerServerEvent("m-CarBoost:Server:LogServer", Language.Log.." **["..plate.."]** "..Language.Log2)
             end, function() 
-                QBCore.Functions.Notify(Language.canceled, 'error')
+                QBCore.Functions.Notify(Language.canceled, 'error', 5000)
             end)
         end
     else
-        TriggerEvent("QBCore:Notify", Language.inside)
+        TriggerEvent("QBCore:Notify", Language.inside, 'error', 5000)
     end
 end)
 

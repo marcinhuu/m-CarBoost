@@ -35,8 +35,15 @@ end
 
 function Notify(msg, type)
     if Config.Framework == "QB" then
-        
-
+        if type == "primary" then 
+            QBCore.Functions.Notify(msg, "primary")
+        end
+        if type == "success" then
+            QBCore.Functions.Notify(msg, "success")
+        end
+        if type == "error" then
+            QBCore.Functions.Notify(msg, "error")
+        end 
     elseif Config.Framework == "ESX" then
         if type == "primary" then 
             exports['mythic_notify']:DoHudText('inform', msg)

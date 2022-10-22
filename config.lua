@@ -2,7 +2,7 @@ Config = {}
 
 Config.Framework = "ESX" -- "QB" or "ESX"
 Config.Core = "esx:getSharedObject" -- qb-core or esx:getSharedObject
-Config.Webhook = "https://discord.com/api/webhooks/954483782101139456/iF74a8g1WfU58vtc6qoJq6KdHw_V2NFsZTiO4Phpg0UFir6Gn45jXDDvMWjeHELksBJ2" -- Webhook for logs
+Config.Webhook = "" -- Webhook for logs
 Config.Payment = true -- Pay for upgrades?
 Config.Amount = 5000 -- Amount of pay
 Config.Time = 5000 -- Time to apply the upgrades

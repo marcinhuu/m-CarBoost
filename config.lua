@@ -1,7 +1,7 @@
 Config = {}
 
-Config.Framework = "ESX" -- "QB" or "ESX"
-Config.Core = "esx:getSharedObject" -- qb-core or esx:getSharedObject
+Config.Framework = "QB" -- "QB" or "ESX"
+Config.Core = "qb-core" -- qb-core or esx:getSharedObject
 Config.Webhook = "" -- Webhook for logs
 Config.Payment = true -- Pay for upgrades?
 Config.Amount = 5000 -- Amount of pay

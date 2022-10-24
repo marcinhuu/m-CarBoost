@@ -1,5 +1,5 @@
 if Config.Framework == "QB" then
-    local QBCore = exports[Config.Core]:GetCoreObject()
+    QBCore = exports[Config.Core]:GetCoreObject()
 elseif Config.Framework == "ESX" then
     ESX = nil
     CreateThread(function()

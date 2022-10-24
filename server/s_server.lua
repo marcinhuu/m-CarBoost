@@ -1,19 +1,9 @@
 if Config.Framework == "QB" then
-    local QBCore = exports[Config.Core]:GetCoreObject()
+    QBCore = exports[Config.Core]:GetCoreObject()
 elseif Config.Framework == "ESX" then
     ESX = nil
     TriggerEvent(Config.Core, function(obj) ESX = obj end)
 end
-AddEventHandler('onResourceStart', function(resourceName)
-    if (GetCurrentResourceName() ~= resourceName) then
-        return
-    end
-    print('^4The resource ^1' .. resourceName .. ' ^4has been started.')
-    print('^4Developed by: ^1 marcinhu#0001^0')
-    print('^4Any problem please join in our discord: ^1discord.gg/marcinhu^0')
-    print('^4Version: ^11.0.0^0')
-    print('^2ALL UPDATED! Enjoy it!^0')
-end)
 
 if Config.Framework == "QB" then
     QBCore.Functions.CreateCallback('m-CarBoost:server:VerificarGuita', function(source, cb)
